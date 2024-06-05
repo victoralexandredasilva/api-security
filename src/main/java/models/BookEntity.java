@@ -15,7 +15,8 @@ public class BookEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID bookId;
     private String title;
-    private String publish;
+    private String author;
+    private Long publish;
     private String gender;
     private String summary;
 
@@ -38,11 +39,11 @@ public class BookEntity {
         this.title = title;
     }
 
-    public String getPublish() {
+    public Long getPublish() {
         return publish;
     }
 
-    public void setPublish(String publish) {
+    public void setPublish(Long publish) {
         this.publish = publish;
     }
 
@@ -60,6 +61,14 @@ public class BookEntity {
 
     public void setSummary(String summary) {
         this.summary = summary;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     @Override
@@ -80,6 +89,7 @@ public class BookEntity {
         return "BookEntity{" +
                 "bookId=" + bookId +
                 ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
                 ", publish='" + publish + '\'' +
                 ", gender='" + gender + '\'' +
                 ", summary='" + summary + '\'' +

@@ -7,6 +7,8 @@ public record RequestBookDTO(
         @NotBlank @NotNull
         String title,
         @NotBlank @NotNull
+        String author,
+        @NotBlank
         String publish,
         @NotBlank @NotNull
         String gender,
