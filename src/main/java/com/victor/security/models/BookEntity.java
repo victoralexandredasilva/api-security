@@ -2,12 +2,13 @@ package com.victor.security.models;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
 
 @Entity(name = "books")
 @Table(name= "books")
-public class BookEntity {
+public class BookEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

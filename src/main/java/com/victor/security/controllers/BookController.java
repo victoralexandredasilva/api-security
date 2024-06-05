@@ -3,13 +3,11 @@ package com.victor.security.controllers;
 import com.victor.security.dtos.RequestBookDTO;
 import com.victor.security.models.BookEntity;
 import com.victor.security.services.BookService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,7 +22,7 @@ public class BookController {
     }
 
     @PostMapping
-    public ResponseEntity postBook(RequestBookDTO dto) {
+    public ResponseEntity postBook(@RequestBody @Valid RequestBookDTO dto) {
 
         System.out.println("CAMADA DE CONTROLLER \n" + dto);
 
