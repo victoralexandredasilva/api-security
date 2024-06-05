@@ -14,7 +14,7 @@ public class BookEntity {
     private UUID bookId;
     private String title;
     private String author;
-    private Long publish;
+    private Integer publish;
     private String gender;
     private String summary;
 
@@ -37,11 +37,11 @@ public class BookEntity {
         this.title = title;
     }
 
-    public Long getPublish() {
+    public Integer getPublish() {
         return publish;
     }
 
-    public void setPublish(Long publish) {
+    public void setPublish(Integer publish) {
         this.publish = publish;
     }
 
