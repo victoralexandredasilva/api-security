@@ -1,4 +1,4 @@
-package dtos;
+package com.victor.security.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

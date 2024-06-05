@@ -1,9 +1,7 @@
-package models;
+package com.victor.security.models;
 
 import jakarta.persistence.*;
 
-import javax.annotation.processing.Generated;
-import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
 

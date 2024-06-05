@@ -1,11 +1,11 @@
-package services.impl;
+package com.victor.security.services.impl;
 
-import dtos.RequestBookDTO;
-import models.BookEntity;
+import com.victor.security.dtos.RequestBookDTO;
+import com.victor.security.models.BookEntity;
+import com.victor.security.repositories.BookRepository;
+import com.victor.security.services.BookService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-import repositories.BookRepository;
-import services.BookService;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void saveBook(RequestBookDTO dto) {
+    public void postBook(RequestBookDTO dto) {
         var entity = new BookEntity();
         BeanUtils.copyProperties(dto, entity);
         this.bookRepository.save(entity);
